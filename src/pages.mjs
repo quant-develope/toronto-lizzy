@@ -320,7 +320,7 @@ const thankYou = () =>
     <h1>Got it, thanks!</h1>
     <p>A crew member will phone you in a few minutes. In a hurry?</p>
     <a class="btn btn-primary btn-lg" href="tel:${site.phone.tel}" data-track="phone_click">${icon('phone')} <span><span class="call-word">Call </span>${site.phone.display}</span></a>
-    <p class="muted">Meanwhile, browse our <a href="/guides/">winter tips</a>.</p>
+    <p class="muted">Meanwhile, check out <a href="#more">our partners</a> below.</p>
   </div>
 </section>
 ${moreSection()}
