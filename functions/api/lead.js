@@ -39,6 +39,7 @@ export async function onRequestPost({ request, env }) {
 
   lead.received = new Date().toISOString();
   lead.ip_country = request.cf?.country || '';
+  lead.site = new URL(request.url).host;
 
   const jobs = [];
   if (env.TELEGRAM_BOT_TOKEN && env.TELEGRAM_CHAT_ID) jobs.push(sendTelegram(env, lead));
@@ -60,6 +61,7 @@ export async function onRequestPost({ request, env }) {
 function summary(lead) {
   const source = [lead.utm_source, lead.utm_medium, lead.utm_campaign, lead.utm_term].filter(Boolean).join(' / ');
   return [
+    `Site: ${lead.site}`,
     `Name: ${lead.name}`,
     `Phone: ${lead.phone}`,
     lead.email && `Email: ${lead.email}`,
@@ -82,7 +84,7 @@ async function sendTelegram(env, lead) {
   const res = await fetch(`https://api.telegram.org/bot${String(env.TELEGRAM_BOT_TOKEN).trim()}/sendMessage`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ chat_id: String(env.TELEGRAM_CHAT_ID).trim(), text: `❄️ New snow removal lead · ${site.brand}\n\n${summary(lead)}` }),
+    body: JSON.stringify({ chat_id: String(env.TELEGRAM_CHAT_ID).trim(), text: `❄️ New snow removal lead\n\n${summary(lead)}` }),
   });
   await check(res, 'telegram');
 }
@@ -114,5 +116,5 @@ async function sendWebhook(env, lead) {
 // Toronto CRM: the lead appears in «Звонки» as «Заявка с сайта», with a button to create an order.
 // Called through a Cloudflare service binding (Worker-to-Worker RPC), so no public endpoint or secret is needed.
 async function sendCrm(env, lead, request) {
-  await env.CRM.siteLead({ ...lead, site: new URL(request.url).host, site_phone: site.phone.tel });
+  await env.CRM.siteLead({ ...lead, site_phone: site.phone.tel });
 }

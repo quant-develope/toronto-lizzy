@@ -10,7 +10,7 @@
 
 Worker `toronto-lizzy` → Settings → Build → Git repository: `quant-develope/toronto-lizzy`, ветка `main`, Root directory — пусто (корень), Build command — пусто (сборка указана в `wrangler.jsonc`), Deploy command — `npx wrangler deploy`. Каждый push в `main` обновляет сайт.
 
-Заявки: в Variables and Secrets этого Worker добавить `TELEGRAM_BOT_TOKEN` и `TELEGRAM_CHAT_ID` (те же, что у `snowman-toronto`). В Telegram сообщение начинается с «New snow removal lead · Snow Force Toronto», чтобы отличать сайт. В CRM `crm-toronto1` заявки идут через service binding `CRM` (секреты не нужны), видны в «Звонках» с хостом этого сайта.
+Заявки: в Variables and Secrets этого Worker добавить `TELEGRAM_BOT_TOKEN` и `TELEGRAM_CHAT_ID` (те же, что у `snowman-toronto`). В Telegram первой строкой заявки идёт домен сайта (`Site: toronto-lizzy.unknwn-creation.workers.dev`). В CRM `crm-toronto1` заявки идут через service binding `CRM` (секреты не нужны), видны в «Звонках» с хостом этого сайта.
 
 ## Как менять
 
