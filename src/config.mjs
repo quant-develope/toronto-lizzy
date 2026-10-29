@@ -31,13 +31,13 @@ export const services = [
   },
   {
     id: 'windrow',
-    title: 'Windrow Clearing',
+    title: 'Plow Ridge Removal',
     text: 'That rock-hard bank the city plow drops across your driveway entrance gets broken up and moved aside.',
     icon: 'road',
   },
   {
     id: 'walkways',
-    title: 'Sidewalks, Walkways & Steps',
+    title: 'Paths, Steps & Sidewalk',
     text: 'Front path, porch, stairs and the public sidewalk by your lot, cleared with hand shovels edge to edge.',
     icon: 'shovel',
   },
