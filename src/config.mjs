@@ -9,7 +9,7 @@ export const site = {
   // Sister sites promoted in "You may be interested" and the garland button.
   lightsUrl: 'https://lights-toronto.unknwn-creation.workers.dev/',
   guttersUrl: 'https://gutters-toronto.unknwn-creation.workers.dev/',
-  hours: 'Call or message us any time',
+  hours: 'Phone or text us, day or night',
   area: 'Toronto & the GTA',
   // Google Tag Manager container ID, e.g. 'GTM-XXXXXXX'. Empty = no GTM.
   // Conversions are pushed to dataLayer: generate_lead, phone_click, quote_click.
@@ -20,83 +20,83 @@ export const services = [
   {
     id: 'car-dig-out',
     title: 'Car Dig-Out',
-    text: 'Car buried by the plow or a snowbank? We brush it off, dig out the wheels and clear a path to the street so you can drive away.',
+    text: 'Street parking sealed in by the plow? We sweep the car clean, free all four wheels and cut a lane out to the road.',
     icon: 'car',
   },
   {
     id: 'driveways',
     title: 'Driveway Clearing',
-    text: 'Call us anytime and we send a crew to clear your driveway down to the pavement, from single-car pads to long shared laneways.',
+    text: 'Phone us whenever you need and a crew scrapes your driveway back to bare asphalt or interlock, short pad or long double.',
     icon: 'truck',
   },
   {
     id: 'windrow',
     title: 'Windrow Clearing',
-    text: 'The heavy ridge of packed snow the city plow leaves at the end of your driveway is cleared, so you can get the car out.',
+    text: 'That rock-hard bank the city plow drops across your driveway entrance gets broken up and moved aside.',
     icon: 'road',
   },
   {
     id: 'walkways',
     title: 'Sidewalks, Walkways & Steps',
-    text: 'Shovelled by hand right down to the pavement: front walk, porch, steps and the city sidewalk in front of your home.',
+    text: 'Front path, porch, stairs and the public sidewalk by your lot, cleared with hand shovels edge to edge.',
     icon: 'shovel',
   },
   {
     id: 'salting',
-    title: 'Salting & De-Icing',
-    text: 'Rock salt or pet-friendly ice melt spread after clearing, so freezing rain and refreeze do not turn your driveway into a rink.',
+    title: 'Salt & Grip',
+    text: 'A light, even spread of salt or a paw-safe melter once the snow is off, so overnight refreeze does not catch you out.',
     icon: 'drop',
   },
   {
     id: 'ice',
-    title: 'Ice Removal',
-    text: 'Packed snow and ice scraped off driveways and walkways, then salted, so you can walk to the car without slipping.',
+    title: 'Ice Chipping',
+    text: 'Trampled, frozen crust chipped off paths and pads, then treated, so nobody slips on the way to the door.',
     icon: 'snow',
   },
   {
     id: 'flat-roofs',
-    title: 'Flat Roofs, Decks & Balconies',
-    text: 'Heavy snow shovelled off flat roofs, garage roofs, rooftop decks and balconies by hand, without damaging the membrane.',
+    title: 'Flat Roofs & Balconies',
+    text: 'Garage tops, flat roofs, terraces and balconies unloaded by hand with plastic blades that will not cut the membrane.',
     icon: 'building',
   },
   {
     id: 'roof',
     title: 'Roof Snow & Icicles',
-    text: 'Snow raked off sloped roofs, dangerous icicles knocked down and ice dams opened before meltwater gets into your ceiling.',
+    text: 'Lower roof edges raked clear, hanging icicles brought down safely and ice ridges opened so water can drain.',
     icon: 'house',
   },
 ];
 
 // Service area for the form and structured data.
 export const cities = [
-  'Toronto', 'North York', 'Etobicoke', 'Scarborough', 'East York', 'York', 'Mississauga', 'Brampton',
-  'Vaughan', 'Markham', 'Richmond Hill', 'Oakville', 'Burlington', 'Pickering',
-  'Ajax', 'Whitby', 'Oshawa', 'Newmarket', 'Aurora', 'Milton',
+  'Toronto', 'Scarborough', 'North York', 'Etobicoke', 'East York', 'York', 'Markham', 'Vaughan',
+  'Richmond Hill', 'Mississauga', 'Brampton', 'Pickering', 'Oakville', 'Ajax',
+  'Burlington', 'Whitby', 'Newmarket', 'Oshawa', 'Milton', 'Aurora',
 ];
 
 // Partner marquee. Shown as text wordmarks; to use real logo files put
 // them in public/assets/img/partners/ and set `logo: '/assets/img/partners/x.svg'`.
 export const partners = [
-  { name: 'Home Depot Pro', style: 'hd' },
   { name: 'HomeStars', style: 'hs' },
-  { name: 'Bark', style: 'bark' },
-  { name: 'Three Best Rated', style: 'tbr' },
-  { name: 'Houzz', style: 'houzz' },
-  { name: 'HomeAdvisor', style: 'ha' },
-  { name: "Lowe's", style: 'lowes' },
   { name: 'Toro', style: 'brand' },
-  { name: 'Boss Snowplow', style: 'brand' },
-  { name: 'Western', style: 'brand' },
+  { name: 'Houzz', style: 'houzz' },
   { name: 'Ariens', style: 'brand' },
+  { name: 'Home Depot Pro', style: 'hd' },
+  { name: 'Three Best Rated', style: 'tbr' },
+  { name: 'Western', style: 'brand' },
+  { name: 'Bark', style: 'bark' },
+  { name: "Lowe's", style: 'lowes' },
+  { name: 'Boss Snowplow', style: 'brand' },
+  { name: 'HomeAdvisor', style: 'ha' },
 ];
 
 // Photos from real jobs in Toronto. Images live in public/assets/img/work/
 // as .jpg + .webp with the same name; pass the name without extension.
 export const gallery = [
-  { img: 'job-driveway', caption: 'Driveway cleared and de-iced', alt: 'Long driveway beside a brick house cleared of snow and ice' },
-  { img: 'job-walkway', caption: 'Front walk shovelled to the pavement', alt: 'Front walkway to a Toronto brick house shovelled clear between snowbanks' },
-  { img: 'job-flat-roof', caption: 'Flat roof cleared', alt: 'Flat roof cleared of heavy snow behind Toronto houses at night' },
-  { img: 'job-roof-deck', caption: 'Rooftop deck cleared', alt: 'Rooftop deck outside a door cleared of snow at night' },
-  { img: 'job-roof-ledge', caption: 'Roof edge cleared by hand', alt: 'Narrow flat roof along a brick wall cleared with a snow shovel' },
-  { img: 'winter-icicles', caption: 'Icicles and ice on the eaves', alt: 'Icicles hanging from a gutter under heavy snow' },
+  { img: 'job-driveway', caption: 'Side drive scraped and treated', alt: 'Narrow drive along a brick home scraped down to the pavement after a storm' },
+  { img: 'job-walkway', caption: 'Path to the front door', alt: 'Shovelled path leading to the door of a brick house between high snowbanks' },
+  { img: 'job-flat-roof', caption: 'Flat roof unloaded', alt: 'Night view of a flat roof with the heavy snow shovelled off' },
+  { img: 'job-roof-deck', caption: 'Terrace by the back door', alt: 'Roof terrace outside a back door cleared after an evening snowfall' },
+  { img: 'job-roof-ledge', caption: 'Narrow ledge, hand shovelled', alt: 'Snow shovel resting on a narrow roof ledge beside a brick wall' },
+  { img: 'winter-icicles', caption: 'Icicles before removal', alt: 'Row of long icicles under a snow-loaded gutter' },
 ];

@@ -91,7 +91,7 @@
     var email = form.elements.email;
     if (email.value && !email.checkValidity()) { email.classList.add('invalid'); bad = bad || email; }
     if (bad) {
-      status.textContent = 'Please fill in your name, a 10-digit phone number, city and service.';
+      status.textContent = 'We need your name, a 10-digit phone, your city and what to clear.';
       status.classList.add('error');
       bad.focus();
       return;
@@ -108,8 +108,8 @@
       })
       .catch(function () {
         btn.disabled = false;
-        btn.textContent = 'Get my free quote';
-        status.innerHTML = 'Something went wrong. Please call us at <a href="' + document.querySelector('.header-phone').getAttribute('href') + '">' +
+        btn.textContent = 'Send my request';
+        status.innerHTML = 'The request did not go through. Please phone <a href="' + document.querySelector('.header-phone').getAttribute('href') + '">' +
           document.querySelector('.header-phone span').textContent + '</a>.';
         status.classList.add('error');
       });

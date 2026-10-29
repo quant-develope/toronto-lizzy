@@ -62,26 +62,26 @@ const header = () => `
   <nav id="site-menu" class="site-menu" hidden aria-label="Main menu">
     <div class="menu-panel">
       <button class="menu-close" type="button" aria-label="Close menu">${icon('close')}</button>
-      <p class="menu-heading">Services</p>
+      <p class="menu-heading">What we clear</p>
       <ul>
         ${services.map((s) => `<li><a href="/#${s.id}">${esc(s.title)}</a></li>`).join('')}
       </ul>
-      <p class="menu-heading">Guides &amp; how-to</p>
+      <p class="menu-heading">Winter tips</p>
       <ul>
         ${guides.map((g) => `<li><a href="/guides/${g.slug}/">${esc(g.short)}</a></li>`).join('')}
-        <li><a href="/guides/">All guides</a></li>
+        <li><a href="/guides/">All winter tips</a></li>
       </ul>
-      <p class="menu-heading">Company</p>
+      <p class="menu-heading">About us</p>
       <ul>
-        <li><a href="/#work">Our work</a></li>
-        <li><a href="/#faq">FAQ</a></li>
+        <li><a href="/#work">Recent jobs</a></li>
+        <li><a href="/#faq">Common questions</a></li>
       </ul>
       <p class="menu-heading">Our partners</p>
       <ul>
-        <li><a href="${site.lightsUrl}" target="_blank" rel="noopener" data-track="lights_click">Permanent holiday lights ↗</a></li>
-        <li><a href="${site.guttersUrl}" target="_blank" rel="noopener" data-track="gutters_click">Gutter cleaning ↗</a></li>
+        <li><a href="${site.lightsUrl}" target="_blank" rel="noopener" data-track="lights_click">Year-round LED roof lights ↗</a></li>
+        <li><a href="${site.guttersUrl}" target="_blank" rel="noopener" data-track="gutters_click">Gutter cleaning &amp; guards ↗</a></li>
       </ul>
-      <a class="btn btn-primary btn-block" href="/#quote" data-track="quote_click">Get a free quote</a>
+      <a class="btn btn-primary btn-block" href="/#quote" data-track="quote_click">Ask for a price</a>
       ${telLink('btn btn-outline btn-block', `${icon('phone')} ${site.phone.display}`)}
     </div>
   </nav>
@@ -92,28 +92,28 @@ const footer = () => `
   <div class="container footer-grid">
     <div>
       <p class="footer-brand">${esc(site.brand)}</p>
-      <p>Car dig-out, driveway clearing, walkways, salting and roof snow for homes across ${esc(site.area)}.</p>
+      <p>A residential snow crew for ${esc(site.area)}: buried cars, driveways, plow ridges, steps and roofs.</p>
     </div>
     <div>
-      <p class="footer-heading">Contact</p>
+      <p class="footer-heading">Reach the crew</p>
       <p>${telLink('', site.phone.display)}<br><a href="https://wa.me/${site.whatsapp}" target="_blank" rel="noopener">WhatsApp</a><br>${esc(site.hours)}</p>
     </div>
     <div>
-      <p class="footer-heading">Guides</p>
+      <p class="footer-heading">Winter tips</p>
       <p>${guides.map((g) => `<a href="/guides/${g.slug}/">${esc(g.short)}</a>`).join('<br>')}</p>
     </div>
   </div>
   <div class="container footer-bottom">
     <span>© ${new Date().getFullYear()} ${esc(site.brand)}</span>
-    <a href="/privacy/">Privacy policy</a>
+    <a href="/privacy/">Privacy</a>
   </div>
 </footer>
 <div class="sticky-cta" role="region" aria-label="Contact us">
   ${telLink('sticky-call', `${icon('phone')}<span><span class="call-word">Call </span>${site.phone.display}</span>`)}
-  <a class="sticky-quote" href="/#quote" data-track="quote_click">Get a free quote</a>
+  <a class="sticky-quote" href="/#quote" data-track="quote_click">Ask for a price</a>
 </div>
-<a class="fab-call fab-whatsapp" href="https://wa.me/${site.whatsapp}" target="_blank" rel="noopener" data-track="whatsapp_click">${icon('whatsapp')}<span class="sr-only">Message us on WhatsApp</span></a>
-<a class="fab-lights" href="/lights/" data-track="lights_click"><svg viewBox="0 0 48 34" aria-hidden="true"><path class="wire" d="M2 8Q24 30 46 8"/><g transform="rotate(-25 7.3 12.6)"><rect x="5.699999999999999" y="11.6" width="3.2" height="3" rx=".6" fill="#8a94b0"/><ellipse class="b b1" cx="7.3" cy="18.6" rx="3.4" ry="4.8"/></g><g transform="rotate(-12 15.6 17.4)"><rect x="14.0" y="16.4" width="3.2" height="3" rx=".6" fill="#8a94b0"/><ellipse class="b b2" cx="15.6" cy="23.4" rx="3.4" ry="4.8"/></g><g transform="rotate(0 24 19)"><rect x="22.4" y="18" width="3.2" height="3" rx=".6" fill="#8a94b0"/><ellipse class="b b3" cx="24" cy="25" rx="3.4" ry="4.8"/></g><g transform="rotate(12 32.4 17.4)"><rect x="30.799999999999997" y="16.4" width="3.2" height="3" rx=".6" fill="#8a94b0"/><ellipse class="b b4" cx="32.4" cy="23.4" rx="3.4" ry="4.8"/></g><g transform="rotate(25 40.7 12.6)"><rect x="39.1" y="11.6" width="3.2" height="3" rx=".6" fill="#8a94b0"/><ellipse class="b b5" cx="40.7" cy="18.6" rx="3.4" ry="4.8"/></g></svg><span class="sr-only">We also install holiday lights</span></a>`;
+<a class="fab-call fab-whatsapp" href="https://wa.me/${site.whatsapp}" target="_blank" rel="noopener" data-track="whatsapp_click">${icon('whatsapp')}<span class="sr-only">Chat with us on WhatsApp</span></a>
+<a class="fab-lights" href="/lights/" data-track="lights_click"><svg viewBox="0 0 48 34" aria-hidden="true"><path class="wire" d="M2 8Q24 30 46 8"/><g transform="rotate(-25 7.3 12.6)"><rect x="5.699999999999999" y="11.6" width="3.2" height="3" rx=".6" fill="#8a94b0"/><ellipse class="b b1" cx="7.3" cy="18.6" rx="3.4" ry="4.8"/></g><g transform="rotate(-12 15.6 17.4)"><rect x="14.0" y="16.4" width="3.2" height="3" rx=".6" fill="#8a94b0"/><ellipse class="b b2" cx="15.6" cy="23.4" rx="3.4" ry="4.8"/></g><g transform="rotate(0 24 19)"><rect x="22.4" y="18" width="3.2" height="3" rx=".6" fill="#8a94b0"/><ellipse class="b b3" cx="24" cy="25" rx="3.4" ry="4.8"/></g><g transform="rotate(12 32.4 17.4)"><rect x="30.799999999999997" y="16.4" width="3.2" height="3" rx=".6" fill="#8a94b0"/><ellipse class="b b4" cx="32.4" cy="23.4" rx="3.4" ry="4.8"/></g><g transform="rotate(25 40.7 12.6)"><rect x="39.1" y="11.6" width="3.2" height="3" rx=".6" fill="#8a94b0"/><ellipse class="b b5" cx="40.7" cy="18.6" rx="3.4" ry="4.8"/></g></svg><span class="sr-only">Our crew also installs roof lights</span></a>`;
 
 const orgSchema = () => ({
   '@context': 'https://schema.org',
