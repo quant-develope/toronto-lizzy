@@ -677,3 +677,8 @@ a { color: var(--sea); }
   .hero-copy { grid-template-columns: 1fr; gap: 0; margin-top: 0; }
   .hero-copy .hero-ctas { flex-direction: row; }
 }
+
+/* "You may be interested" page (opens after a tap on Call) */
+.interested-head { padding-bottom: 8px; }
+.interested-head h1 { font-size: clamp(2rem, 5vw, 3.2rem); }
+a.service-card { text-decoration: none; color: inherit; }

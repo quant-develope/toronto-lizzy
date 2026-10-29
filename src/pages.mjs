@@ -384,6 +384,37 @@ const lightsPage = () =>
 </section>`,
   });
 
+const interested = () =>
+  page({
+    path: '/you-may-be-interested/',
+    title: `You may be interested | ${site.brand}`,
+    description: 'Other home services from our partners and more jobs our snow crew handles.',
+    noindex: true,
+    body: `
+<section class="section interested-head">
+  <div class="container narrow center">
+    <p class="kicker">While the phone rings</p>
+    <h1>You may be interested</h1>
+    <p class="section-sub">Our crew will pick up in a moment. In the meantime, here are a few more ways we and our partners keep a Toronto home in shape through winter.</p>
+    <p>${icon('phone')} Line dropped? <a href="tel:${site.phone.tel}" data-track="phone_click">Try ${site.phone.display} again</a></p>
+  </div>
+</section>
+${moreSection()}
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Also on our list</h2>
+    <div class="services-grid">
+      ${services.map((s) => `
+      <a class="service-card" href="/#${s.id}">
+        <span class="service-icon">${icon(s.icon)}</span>
+        <div><h3>${esc(s.title)}</h3><p>${esc(s.text)}</p></div>
+      </a>`).join('')}
+    </div>
+    <p class="center"><a class="btn btn-primary btn-lg" href="/" data-track="home_click">Back to the main page</a></p>
+  </div>
+</section>`,
+  });
+
 const notFound = () =>
   page({
     path: '/404',
@@ -407,6 +438,7 @@ export const pages = () => [
   ['thank-you/index.html', thankYou()],
   ['privacy/index.html', privacy()],
   ['lights/index.html', lightsPage()],
+  ['you-may-be-interested/index.html', interested()],
   ['404.html', notFound()],
 ];
 
