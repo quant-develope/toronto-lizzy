@@ -37,11 +37,26 @@
     if (el) dl.push({ event: el.getAttribute('data-track'), link_location: el.className || 'link' });
   });
 
-  // After a tap on a phone number the dialer opens, and this tab moves on to "You may be interested"
+  // After a tap on a phone number the phone's own call screen opens. Only once the visitor
+  // comes back to the browser does this tab move on to "You may be interested", so the
+  // navigation never interrupts the call prompt (iOS treats that as an automatic call).
+  var afterCall = false, leftPage = false;
+  function toInterested() {
+    if (!afterCall || !leftPage) return;
+    afterCall = false;
+    location.href = '/you-may-be-interested/';
+  }
   document.addEventListener('click', function (e) {
-    var tel = e.target.closest('a[href^="tel:"]');
-    if (!tel || location.pathname === '/you-may-be-interested/') return;
-    setTimeout(function () { location.href = '/you-may-be-interested/'; }, 800);
+    if (!e.target.closest('a[href^="tel:"]') || location.pathname === '/you-may-be-interested/') return;
+    afterCall = true;
+    leftPage = false;
+  });
+  window.addEventListener('blur', function () { if (afterCall) leftPage = true; });
+  window.addEventListener('focus', function () { setTimeout(toInterested, 300); });
+  document.addEventListener('visibilitychange', function () {
+    if (!afterCall) return;
+    if (document.hidden) leftPage = true;
+    else setTimeout(toInterested, 300);
   });
 
   // Bottom bar: hidden while the hero or final "Get a free quote" button is on screen,
