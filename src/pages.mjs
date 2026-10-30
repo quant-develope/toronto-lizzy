@@ -126,13 +126,6 @@ const driftPath = `M0 120V${drift[0]}${drift.map((h, i) => `Q${i * 120 + 60} ${h
 const wave = (cls, fill) =>
   `<svg class="wave ${cls}" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path fill="${fill}" d="${driftPath}"/></svg>`;
 
-const pains = [
-  ['car', 'Stuck at the curb', 'The plow seals your parked car behind a frozen bank right before you need to leave for work.'],
-  ['warn', 'Falls on the steps', 'Ice on stairs and paths is where most winter falls happen, and a guest who slips on your property is your problem.'],
-  ['house', 'Water through the ceiling', 'Snow melting on a warm roof refreezes at the edge, and the trapped water finds its way indoors.'],
-  ['shovel', 'Strained backs and hearts', 'Lifting wet snow in the cold is hard work. Hospitals see a wave of shovelling injuries after every big storm.'],
-];
-
 // Animated snowfall layer (pure CSS, see .snow in main.css).
 const snowfall = () => `<div class="snow" aria-hidden="true">${'<i></i>'.repeat(36)}</div>`;
 
@@ -191,25 +184,6 @@ ${marquee()}
     <div class="work-grid">
       ${gallery.map((g) => `
       <figure class="work-item reveal">${pic(g.img, g.alt)}</figure>`).join('')}
-    </div>
-  </div>
-</section>
-<section class="section pains" aria-labelledby="pains-title">
-  <div class="container">
-    <p class="kicker center reveal">Why not just leave it</p>
-    <h2 id="pains-title" class="section-title reveal">What a snowy morning <em>really</em> costs</h2>
-    <p class="section-sub reveal">Toronto winters bring wet, heavy snowfalls that often freeze solid by the next night.</p>
-    <div class="pain-grid">
-      ${pains.map(([i, t, d]) => `
-      <article class="pain-card reveal">
-        <span class="pain-icon">${icon(i)}</span>
-        <h3>${t}</h3>
-        <p>${d}</p>
-      </article>`).join('')}
-    </div>
-    <div class="relief reveal">
-      <p><strong>The easy way:</strong> stay inside with a hot drink. Phone us and the crew handles the cold part.</p>
-      <a class="btn btn-call" href="tel:${site.phone.tel}" data-track="phone_click">${icon('phone')} <span><span class="call-word">Call </span>${site.phone.display}</span></a>
     </div>
   </div>
 </section>
