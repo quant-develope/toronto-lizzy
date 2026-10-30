@@ -190,7 +190,7 @@ ${marquee()}
     <p class="section-sub reveal">Snapshots our crew took on site after finishing up.</p>
     <div class="work-grid">
       ${gallery.map((g) => `
-      <figure class="work-item reveal">${pic(g.img, g.alt)}<figcaption>${esc(g.caption)}</figcaption></figure>`).join('')}
+      <figure class="work-item reveal">${pic(g.img, g.alt)}</figure>`).join('')}
     </div>
   </div>
 </section>
