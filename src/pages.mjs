@@ -1,4 +1,4 @@
-import { site, services, cities, partners, gallery } from './config.mjs';
+import { site, services, cities, partners, gallery, beforeAfter } from './config.mjs';
 import { guides } from './guides.mjs';
 import { page, esc, icon } from './layout.mjs';
 
@@ -184,6 +184,20 @@ ${marquee()}
     <div class="work-grid">
       ${gallery.map((g) => `
       <figure class="work-item reveal">${pic(g.img, g.alt)}</figure>`).join('')}
+    </div>
+  </div>
+</section>
+<section id="before-after" class="section ba-section" aria-labelledby="ba-title">
+  <div class="container">
+    <p class="kicker center reveal">Then and now</p>
+    <h2 id="ba-title" class="section-title reveal">From buried to bare</h2>
+    <p class="section-sub reveal">Walks, backyards and driveways shown side by side: left as we arrived, right as we headed home.</p>
+    <div class="ba-grid">
+      ${beforeAfter.map((p) => `
+      <div class="ba-pair reveal">
+        <figure class="ba-shot">${pic('ba-' + p.before, 'Before: ' + p.alt)}<span class="ba-tag">Before</span></figure>
+        <figure class="ba-shot">${pic('ba-' + p.after, 'After: ' + p.alt)}<span class="ba-tag ba-tag-after">After</span></figure>
+      </div>`).join('')}
     </div>
   </div>
 </section>

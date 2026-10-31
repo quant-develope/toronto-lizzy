@@ -100,3 +100,12 @@ export const gallery = [
   { img: 'job-roof-ledge', caption: 'Narrow ledge, hand shovelled', alt: 'Snow shovel resting on a narrow roof ledge beside a brick wall' },
   { img: 'winter-icicles', caption: 'Icicles before removal', alt: 'Row of long icicles under a snow-loaded gutter' },
 ];
+
+// Before / after pairs from real jobs. Files live in public/assets/img/work/
+// as ba-<name>.jpg + .webp; pass the name without the ba- prefix or extension.
+export const beforeAfter = [
+  { before: 'porch-before', after: 'porch-after', alt: 'front walk to a porch with a single footpath through the snow, then shovelled wide to the steps' },
+  { before: 'backyard-before', after: 'backyard-after-2', alt: 'rear yard by the basement stairs, drifted over and then cleared to the paving' },
+  { before: 'semi-before', after: 'semi-after', alt: 'shared driveway of two brick semis, packed with snow and then scraped clear' },
+  { before: 'car-drive-before', after: 'car-drive-after', alt: 'parked car and driveway snowed in, then dug out by our crew' },
+];
