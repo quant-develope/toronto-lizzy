@@ -93,12 +93,12 @@ export const partners = [
 // Photos from real jobs in Toronto. Images live in public/assets/img/work/
 // as .jpg + .webp with the same name; pass the name without extension.
 export const gallery = [
-  { img: 'job-driveway', caption: 'Side drive scraped and treated', alt: 'Narrow drive along a brick home scraped down to the pavement after a storm' },
-  { img: 'job-walkway', caption: 'Path to the front door', alt: 'Shovelled path leading to the door of a brick house between high snowbanks' },
-  { img: 'job-flat-roof', caption: 'Flat roof unloaded', alt: 'Night view of a flat roof with the heavy snow shovelled off' },
+  { img: 'job-garage-lane', caption: 'Laneway garages cleared', alt: 'Laneway in front of two garage doors scraped clear late in the evening' },
+  { img: 'job-night-drive', caption: 'Driveway done after dark', alt: 'Brick house driveway cleared up to the garage doors at night' },
+  { img: 'job-stone-walk', caption: 'Walk to a stone house', alt: 'Front walk to a stone house cut through tall snowbanks on a sunny day' },
+  { img: 'job-low-roof', caption: 'Low roof unloaded', alt: 'Low flat roof between brick walls with most of the snow shovelled off' },
   { img: 'job-roof-deck', caption: 'Terrace by the back door', alt: 'Roof terrace outside a back door cleared after an evening snowfall' },
   { img: 'job-roof-ledge', caption: 'Narrow ledge, hand shovelled', alt: 'Snow shovel resting on a narrow roof ledge beside a brick wall' },
-  { img: 'winter-icicles', caption: 'Icicles before removal', alt: 'Row of long icicles under a snow-loaded gutter' },
 ];
 
 // Before / after pairs from real jobs. Files live in public/assets/img/work/
